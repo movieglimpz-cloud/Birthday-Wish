@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Question 😳</title>
+  <link rel="stylesheet" href="page5.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Main Content -->
+  <div class="content fade-in">
+    <img 
+      src="https://movieglimpz.sirv.com/Images/dog-smile.gif" 
+      alt="funny"
+      class="center-img"
+    >
+
+    <h2 class="main-title">oho aik cheez to bhul gya puchna,</h2>
+
+    <p class="sub-text">
+      apne kitni age complete karke ana ha uper? 🫣
+    </p>
+
+    <div class="btn-row">
+      <button onclick="showPopup()">35</button>
+      <button onclick="showPopup()">70</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- DARK OVERLAY -->
+<div id="overlay" class="overlay hidden"></div>
+
+<!-- POPUP -->
+<div id="popup" class="popup hidden">
+
+  <!-- Close button -->
+  <span class="close-btn" onclick="closePopup()">✖</span>
+
+  <p class="popup-text">Wrong answer 😭</p>
+
+  <button class="popup-btn" onclick="goToPage6()">Hmm </button>
+</div>
+
+<script>
+  function showPopup() {
+    document.getElementById("popup").classList.remove("hidden");
+    document.getElementById("overlay").classList.remove("hidden");
+  }
+
+  function closePopup() {
+    document.getElementById("popup").classList.add("hidden");
+    document.getElementById("overlay").classList.add("hidden");
+  }
+
+  function goToPage6() {
+    window.location.href = "page6.html";
+  }
+</script>
+
+</body>
+</html>

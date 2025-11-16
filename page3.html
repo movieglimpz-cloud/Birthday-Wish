@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reham? 😭</title>
+  <link rel="stylesheet" href="page3.css">
+</head>
+
+<body>
+
+<div class="container fade-in">
+
+  <!-- First Question -->
+  <h1 class="title">Reham ni karogi is bicharay per? 😭</h1>
+
+  <div class="choices">
+    <button onclick="showPopup()">Na</button>
+    <button onclick="showPopup()">Bilkul Ni</button>
+  </div>
+
+</div>
+
+<!-- Overlay -->
+<div id="overlay" class="overlay hidden"></div>
+
+<!-- Popup -->
+<div id="popup" class="popup hidden">
+  <p>
+    Theek ha phr ye jaraha ha 120 Km per hour ki speed per 😭  
+    <br><br>
+    Byeeeee....
+  </p>
+
+  <button class="ok-btn" onclick="goToPage4()">OK</button>
+</div>
+
+<script>
+  function showPopup() {
+    document.getElementById("popup").classList.remove("hidden");
+    document.getElementById("overlay").classList.remove("hidden");
+  }
+
+  function goToPage4() {
+    window.location.href = "page4.html";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Misbah 🎉</title>
+  <link rel="stylesheet" href="page7.css">
+</head>
+
+<body>
+
+<!-- Confetti Canvas -->
+<canvas id="confetti"></canvas>
+
+<!-- Dark Blur Overlay -->
+<div class="overlay-bg"></div>
+
+<!-- MAIN CONTENT -->
+<div class="container fade-in">
+
+  <!-- Title -->
+  <h1 class="main-title">
+    Happy Birthday Misbah 🎉<br>
+    <span class="small">(Choti Si Bachi)</span>
+  </h1>
+
+  <!-- Wish Card -->
+  <div class="wish-card">
+    <h2 class="wish-title">Dua & Wishes 💐</h2>
+
+    <p class="wish-text">
+     • Allah aap ko hamesha apni hifazat mein rakhe 🤍<br>
+• Aap ki zindagi hamesha khushiyon se bhari rahe ✨<br>
+• Har din naya sukoon, nayi rehmat, nayi muskurahat laaye 🌙<br>
+• Aap ki tamam duaen qabool hon 💛<br>
+• Har mushkil aasan ho, har ghum door ho, har raasta roshan ho ✨<br><br>
+
+• Aap jitni pyaari lagti ho, utni pyaari aap ki zindagi bhi ho InshaAllah 🌸<br>
+• May your future be softer than your favourite blanket 🧸💗<br>
+• Kabhi kabhi break lena bhi zaroori hota hai — khud ka khayal rakha karo 🤍<br>
+• Aap ki zindagi me sirf achi energies, ache log aur ache surprises aayein ✨<br>
+• Allah aap ke dil ko hamesha halka, saaf aur khush rakhe 💛<br><br>
+
+<!-- Funny Wishes -->
+• Aur haan… bat bat per naraz na hua karo 😭💗 (warna dil dar jata hai)<br>
+• Thori si kam tang kiya karo logon ko… lekin thori si zyada bhi chalega 😂<br>
+• Khana time per khaya karo, warna mood bhi tumhara hi jaise hojaata 😂🍽️<br>
+• Apni “cute gussa mode” ki intensity thodi low rakha karo 😭🔥<br>
+• Aur thori si kam mysterious bhi raha karo… sab confuse hojate hain 😭😂<br><br>
+
+Aur haan…<br>
+<strong>Smile karti raha karein 😊</strong><br>
+<span class="soft">Aap ki smile hi humari smile hai 💗</span>
+    </p>
+  </div>
+
+  <!-- Doge Reaction Row -->
+  <h3 class="gallery-title">Bas Wo Kutt walay options ko serious Na Lena!😭</h3>
+
+  <div class="image-row">
+    <img src="https://movieglimpz.sirv.com/Images/30d5e6fc8b2fab452555c9314d72be59.gif" class="doge-img">
+    <img src="https://movieglimpz.sirv.com/Images/30d5e6fc8b2fab452555c9314d72be59.gif" class="doge-img">
+    <img src="https://movieglimpz.sirv.com/Images/30d5e6fc8b2fab452555c9314d72be59.gif" class="doge-img">
+    <img src="https://movieglimpz.sirv.com/Images/30d5e6fc8b2fab452555c9314d72be59.gif" class="doge-img">
+  </div>
+
+  <!-- Closeup Final -->
+  <div class="closeup-box">
+    <img 
+      src="https://movieglimpz.sirv.com/Images/nervous-dog-shy-wuba.gif"
+      class="closeup-img"
+      alt="closeup doge"
+    >
+    <p class="closeup-text">Bas itna hi tha… ab muskura do na 😭😂</p>
+  </div>
+
+</div>
+
+<!-- Confetti Script -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+  // Infinite looping confetti
+  function endlessConfetti() {
+    confetti({
+      particleCount: 5,
+      startVelocity: 20,
+      spread: 180,
+      ticks: 90,
+      origin: { x: Math.random(), y: 0 }
+    });
+    requestAnimationFrame(endlessConfetti);
+  }
+
+  endlessConfetti();
+
+  // Burst on page load
+  setTimeout(() => {
+    confetti({
+      particleCount: 120,
+      spread: 70,
+      startVelocity: 45,
+      origin: { y: 0.6 }
+    });
+  }, 600);
+</script>
+
+</body>
+</html>

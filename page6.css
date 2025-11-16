@@ -1,0 +1,72 @@
+/* Background */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #ffe6ef, #fff7d1, #ffd6d6);
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Container */
+.container {
+  max-width: 850px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Fade animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Image */
+.center-img {
+  width: 280px;
+  max-width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  margin-bottom: 25px;
+}
+
+/* Funny text */
+.funny-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 35px;
+}
+
+/* Button */
+.next-btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 12px;
+  background: #ff7799;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.next-btn:hover {
+  transform: scale(1.12);
+  background: #ff5d86;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .center-img { width: 220px; }
+  .funny-text { font-size: 1.2rem; }
+  .next-btn { width: 90%; font-size: 1.1rem; }
+}

@@ -1,0 +1,154 @@
+/* ---------------- BACKGROUND IMAGE ---------------- */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-image: url("https://movieglimpz.sirv.com/Images/7024229_3493597.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------------- DARK BLUR OVERLAY ---------------- */
+.overlay-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  background: rgba(0,0,0,0.65); /* darker, stronger */
+  backdrop-filter: blur(8px);   /* strong blur */
+  
+  z-index: 0;
+}
+
+/* ---------------- CONFETTI CANVAS ---------------- */
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ---------------- MAIN CONTENT ---------------- */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  z-index: 20; /* above overlay */
+}
+
+/* Fade-in */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* ---------------- TITLE ---------------- */
+.main-title {
+  font-size: 2.7rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+  margin-bottom: 20px;
+}
+
+.small {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  color: #eaeaea;
+}
+
+/* ---------------- WISH CARD ---------------- */
+.wish-card {
+  background: rgba(255,255,255,0.15); /* transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  padding: 25px;
+  border-radius: 20px;
+  margin: 25px 0;
+
+  box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.wish-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.wish-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: #f7f7f7;
+}
+
+.soft {
+  color: #ff99b6;
+  font-weight: 800;
+}
+
+/* ---------------- GALLERY ---------------- */
+.gallery-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 30px 0;
+}
+
+.doge-img {
+  width: 130px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+  transition: transform 0.25s ease;
+}
+
+.doge-img:hover {
+  transform: scale(1.13) rotate(3deg);
+}
+
+/* ---------------- CLOSEUP ---------------- */
+.closeup-img {
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.55);
+}
+
+.closeup-text {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-top: 10px;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(0,0,0,0.65);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 480px) {
+  .main-title { font-size: 2.1rem; }
+  .wish-card { padding: 17px; }
+  .doge-img { width: 100px; }
+  .closeup-img { width: 190px; }
+  .closeup-text { font-size: 1.1rem; }
+}

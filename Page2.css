@@ -1,0 +1,144 @@
+/* ---------- Global Page Styling ---------- */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #ffe6ef, #fff7d1, #ffd6d6);
+  font-family: "Poppins", sans-serif;
+
+  /* Centers the content vertically & horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* ---------- Container ---------- */
+.container {
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* ---------- Animations ---------- */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.3s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* ---------- Headings ---------- */
+.title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #444;
+  margin-top: 10px;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* ---------- Question Text ---------- */
+.question h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* ---------- Options Layout ---------- */
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Responsive */
+}
+
+/* ---------- Option Cards ---------- */
+.option-card {
+  background: white;
+  padding: 25px;
+  width: 260px;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.option-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.20);
+}
+
+/* ---------- Card Images ---------- */
+.option-card img {
+  width: 200px;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* ---------- Captions ---------- */
+.caption {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 12px;
+  color: #e63946;
+}
+
+/* ---------- Mobile Responsive ---------- */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .question h3 {
+    font-size: 1.3rem;
+  }
+
+  .options {
+    gap: 20px;
+  }
+
+  .option-card {
+    width: 220px;
+    padding: 20px;
+  }
+
+  .option-card img {
+    width: 170px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.9rem;
+  }
+
+  .question h3 {
+    font-size: 1.1rem;
+  }
+
+  .option-card {
+    width: 90%;
+  }
+
+  .option-card img {
+    width: 150px;
+  }
+}

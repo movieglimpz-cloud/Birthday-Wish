@@ -1,0 +1,163 @@
+/* ---------- Page Background ---------- */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #ffe6ef, #fff7d1, #ffd6d6);
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* ---------- Container ---------- */
+.container {
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Fade In Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* ---------- Titles ---------- */
+.title {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+/* ---------- Buttons ---------- */
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 12px;
+  background: #ff7799;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+button:hover {
+  transform: scale(1.12);
+  background: #ff5d86;
+}
+
+/* ---------- Popup Overlay ---------- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(2px);
+  z-index: 9;
+}
+
+/* ---------- Popup Box ---------- */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 80%;
+  max-width: 420px;
+  padding: 30px 35px;
+  border-radius: 18px;
+
+  box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+  z-index: 10;
+
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+
+  animation: popIn 0.4s ease;
+}
+
+/* Popup Animation */
+@keyframes popIn {
+  from {
+    transform: translate(-50%, -60%) scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* OK Button Inside Popup */
+.ok-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 12px;
+  background: #ff7799;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+
+.ok-btn:hover {
+  transform: scale(1.12);
+  background: #ff5d86;
+}
+
+/* Hide Class */
+.hidden {
+  display: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .choices {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  button {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.9rem;
+  }
+
+  button {
+    width: 90%;
+  }
+
+  .popup {
+    font-size: 1.1rem;
+    padding: 25px;
+  }
+}
