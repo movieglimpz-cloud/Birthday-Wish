@@ -18,8 +18,8 @@ body {
   width: 100%;
   height: 100%;
   
-  background: rgba(0,0,0,0.65); /* darker, stronger */
-  backdrop-filter: blur(8px);   /* strong blur */
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(8px);
   
   z-index: 0;
 }
@@ -42,10 +42,10 @@ body {
   padding: 25px;
   text-align: center;
   position: relative;
-  z-index: 20; /* above overlay */
+  z-index: 20;
 }
 
-/* Fade-in */
+/* Fade-in effect */
 .fade-in {
   opacity: 0;
   animation: fadeIn 1.2s forwards;
@@ -60,7 +60,7 @@ body {
   font-weight: 900;
   color: #ffffff;
   text-shadow: 0 0 8px rgba(0,0,0,0.6);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .small {
@@ -69,18 +69,37 @@ body {
   color: #eaeaea;
 }
 
+/* ---------------- CIRCULAR IMAGE UNDER TITLE ---------------- */
+.circle-wrapper {
+  margin: 15px auto 25px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.circle-img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255,255,255,0.85);
+  box-shadow: 0 0 18px rgba(0,0,0,0.45);
+  animation: popIn 0.9s ease;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
 /* ---------------- WISH CARD ---------------- */
 .wish-card {
-  background: rgba(255,255,255,0.15); /* transparent white */
+  background: rgba(255,255,255,0.15);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
   padding: 25px;
   border-radius: 20px;
-  margin: 25px 0;
-
-  box-shadow: 0 12px 28px rgba(0,0,0,0.28);
-  border: 1px solid rgba(255,255,255,0.25);
+  margin-bottom: 40px;
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
 }
 
 .wish-title {
@@ -99,7 +118,7 @@ body {
 
 .soft {
   color: #ff99b6;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 /* ---------------- GALLERY ---------------- */
@@ -115,7 +134,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 18px;
-  margin: 30px 0;
+  margin-bottom: 45px;
 }
 
 .doge-img {
@@ -147,7 +166,8 @@ body {
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 480px) {
   .main-title { font-size: 2.1rem; }
-  .wish-card { padding: 17px; }
+  .circle-img { width: 130px; height: 130px; }
+  .wish-card { padding: 18px; }
   .doge-img { width: 100px; }
   .closeup-img { width: 190px; }
   .closeup-text { font-size: 1.1rem; }
